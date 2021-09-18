@@ -7,6 +7,7 @@
     <title>CV-html</title>
     <link rel="stylesheet" href="styles.css">    
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/default.min.css">
     <script src="//unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>  
@@ -22,13 +23,16 @@
             
         </div>        
         <nav>
-            <ul>
+            <ul class = "top-nav">
                 <li><a href="#Profile">Profile</a></li>
                 <li><a href="#Skills">Skills</a></li>
                 <li><a href="#Code">Code</a></li>
                 <li><a href="#Work">Work</a></li>
                 <li><a href="#Education">Education</a></li>
                 <li><a href="#Courses">Courses</a></li>
+                <a href="javascript: void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    </a>
             </ul>     
         </nav>
     </header>
@@ -116,6 +120,7 @@ function pow(x, n) {
             <div class="year">2021</div>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
 
