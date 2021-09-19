@@ -92,7 +92,7 @@ footer {
     .top-nav.vertical {
         position: relative;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-start;             
     }
     .top-nav.vertical .icon {
         position: absolute;
@@ -100,8 +100,11 @@ footer {
         right: 0;
         margin-right: 15px;
     }
+    .top-nav.vertical  > li {        
+        width: 90%;             
+    }
     .top-nav.vertical  > li > a {
-        display: block;
-        
+        display: inline-block;        
+        width: 90%;           
     }
  }
