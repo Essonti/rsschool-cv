@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth; 
 }
 body {
-    max-width:600px;
+    max-width:666px;
     margin: 15px auto;
 }
 header {
@@ -65,14 +65,15 @@ main {
 section {
     margin-left: 15px;
 }
-
+.fiboFunction {
+    font-size: 21px;
+}
 footer {
     background-color: #dde6cd;
     display: flex;    
 }
 .logo {
     margin: 15px 0px 15px 15px;
-
 }
 .year {
     margin: 20px 15px 15px auto;

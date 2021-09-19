@@ -19,8 +19,7 @@
             <h1>Sergei Trofimchenko</h1>
             <figure>
                 <img src="images/Vaultboy.png" alt="Me" width="150" height="150">
-            </figure>
-            
+            </figure>            
         </div>        
         <nav>
             <ul class = "top-nav">
@@ -65,18 +64,27 @@
         </section>
         <section id="Code">
             <h2>JS code example</h2> 
-<!--TODO add new code-->                  
-                <!--<figure class="code">  
-                    <figcaption>"<code>Pow</code>" raise "x" to the pow of "n".</figcaption> -->          
+                    <figcaption>"<code class = "fiboFunction">fiboArray</code>" 
+                        returns an array of Fibonacci series with 'n' numbers.
+                    </figcaption>         
                     <pre><code>
-function pow(x, n) { 
-    return x ** n;
+function fiboArray (n) {
+    let arr = [];
+    if (n > 0 && Number.isInteger(n)) {
+        if (n === 1) {
+            arr = [0];
+        } else {
+            arr = [0, 1];
+        } 
+        for (i = 2; i < n; i++) {
+            arr.push (arr[i - 2] + arr[i - 1])
+        }
+        return arr;                
+    } else {
+        throw new Error ('Wrong input! Parametr "n" must be integer more than zero.')
     }
-    let x = prompt("x");
-    let n = prompt("n");
-    alert(pow(x, n))                          
-                    </code></pre>                          
-                    <!--</figure>  -->                           
+}                     
+                    </code></pre>                                                   
         </section>
         <section id="Work">
             <h2>IT work</h2>
