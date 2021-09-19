@@ -2,19 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>CV-html</title>
     <link rel="stylesheet" href="styles.css">    
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">     
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/default.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>  
 </head>
 
 <body>
     <header>
-        <div class="headerText"><h1>Sergei Trofimchenko</h1></div>
-        <figure  class="headerImg">
-            <img src="images/Vaultboy.png" alt="My photo" width="150" height="150">
-        </figure>
+        <div>
+            <h1>Sergei Trofimchenko</h1>
+            <figure>
+                <img src="images/Vaultboy.png" alt="Me" width="150" height="150">
+            </figure>            
+        </div>        
+        <nav>
+            <ul class = "top-nav">
+                <li><a href="#Profile">Profile</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Code">Code</a></li>
+                <li><a href="#Work">Work</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Courses">Courses</a></li>
+                <a href="javascript: void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    </a>
+            </ul>     
+        </nav>
     </header>
     <main>
         <div>
@@ -25,51 +44,71 @@
                 <li><b>Email:</b> Strofim4enko@yandex.ru</li>
             </ul>
         </div>
-        <section>
+        <section id="Profile">
             <h2>Profile</h2>
-            <p class="section"> Qualified engineer and economist in catering sphere. 
+            <p> Qualified engineer and economist in catering sphere. 
             Have an experience of programming in Visual Basic 6.0, Excel and Python. My priority is to work as developer 
             in a big IT company with strong team on interesting projects. 
             Have a wish and ability to learn quickly 
             in order to get that opportunity.</p>
         </section>
-        <section>
+        <section id="Skills">
             <h2>Skills</h2>
-            <p class="section"> HTML, CSS & Git Basics</p>
+                <ul class="skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Git</li>
+                    <li>JS basics</li>
+                </ul>                  
+            </p>
         </section>
-        <section>
-            <h2>JS code example</h2>
-                <pre>
-    <code class="code">                
-    function pow(x, n) {
-        return x ** n;
+        <section id="Code">
+            <h2>JS code example</h2> 
+                    <figcaption>"<code class = "fiboFunction">fiboArray</code>" 
+                        returns an array of Fibonacci series with 'n' numbers.
+                    </figcaption>         
+                    <pre><code>
+function fiboArray (n) {
+    let arr = [];
+    if (n > 0 && Number.isInteger(n)) {
+        if (n === 1) {
+            arr = [0];
+        } else {
+            arr = [0, 1];
+        } 
+        for (i = 2; i < n; i++) {
+            arr.push (arr[i - 2] + arr[i - 1])
         }
-        let x = prompt("x");
-        let n = prompt("n");
-        alert(pow(x, n))                               
-    </code>
-                </pre>            
+        return arr;                
+    } else {
+        throw new Error ('Wrong input! Parametr "n" must be integer more than zero.')
+    }
+}                     
+                    </code></pre>                                                   
         </section>
-        <section>
+        <section id="Work">
             <h2>IT work</h2>
             <figure  class="mainImg">
                 <img src="images/loadingBar.jpg" alt="Loading..." width="200">
                 <figcaption>Loading...</figcaption>
             </figure>
         </section>
-        <section>
+        <section id="Education">
             <h2>Education</h2>
             <p><b>PLEKHANOV Russian University of Economics.</b> Moscow, Russia.</p>
-                <ul>
-                    <li>
-                        Engineer with specialization “Machines and apparats of food industry”
-                    </li>
-                    <li>
-                        Economist-manager with specialization “Economy and management in catering”
-                    </li>
-                </ul>           
+                <details>
+                    <summary>My specialisations</summary>
+                    <ul>
+                        <li>
+                            Engineer with specialization “Machines and apparats of food industry”
+                        </li>
+                        <li>
+                            Economist-manager with specialization “Economy and management in catering”
+                        </li>
+                    </ul>  
+                </details>                         
         </section>
-        <section>
+        <section id="Courses">
             <h2>Courses and certificates</h2>
             <p>
                 <b>EF SET Certificate</b> with overall English level of <b>C1 ADVANCED</b>
@@ -89,5 +128,11 @@
             <div class="year">2021</div>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
+
+<!--
+    Семантические теги 9 шт.: <header> <figure> <figcagtion> <nav> <main> <section> <details> <summary> <footer>
+        
+    -->
