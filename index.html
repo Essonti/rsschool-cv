@@ -21,18 +21,19 @@
                 <img src="images/Vaultboy.png" alt="Me" width="150" height="150">
             </figure>            
         </div>        
-        <nav>
-            <ul class = "top-nav">
+        <nav class = "top-nav">
+            <ul>
                 <li><a href="#Profile">Profile</a></li>
                 <li><a href="#Skills">Skills</a></li>
                 <li><a href="#Code">Code</a></li>
                 <li><a href="#Work">Work</a></li>
                 <li><a href="#Education">Education</a></li>
                 <li><a href="#Courses">Courses</a></li>
-                <a href="javascript: void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                    </a>
-            </ul>     
+                
+            </ul>    
+            <a href="javascript: void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a> 
         </nav>
     </header>
     <main>
@@ -59,14 +60,13 @@
                     <li>CSS</li>
                     <li>Git</li>
                     <li>JS basics</li>
-                </ul>                  
-            </p>
+                </ul>           
         </section>
         <section id="Code">
             <h2>JS code example</h2> 
-                    <figcaption>"<code class = "fiboFunction">fiboArray</code>" 
+                    <p>"<code class = "fiboFunction">fiboArray</code>" 
                         returns an array of Fibonacci series with 'n' numbers.
-                    </figcaption>         
+                    </p>         
                     <pre><code>
 function fiboArray (n) {
     let arr = [];
@@ -76,7 +76,7 @@ function fiboArray (n) {
         } else {
             arr = [0, 1];
         } 
-        for (i = 2; i < n; i++) {
+        for (i = 2; i &lt; n; i++) {
             arr.push (arr[i - 2] + arr[i - 1])
         }
         return arr;                
