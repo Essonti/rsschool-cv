@@ -32,9 +32,13 @@ header > nav {
 .icon {
     display: none;
     color:black;
-    padding: 0 10px;
+    padding: 0px 10px 5px 10px;
+    /* border: 1px solid rebeccapurple; */
 }
-.top-nav {
+/* .top-nav {
+    border: 1px solid rebeccapurple;
+} */
+.top-nav > ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
@@ -42,19 +46,20 @@ header > nav {
     padding: 0 15px;
     border-top: 1px solid gray;
     margin-bottom: 5px;
+    margin-top: 0px;
     
 }
-.top-nav > li {
+.top-nav ul >  li {
     list-style-type: none;   
     display: block;    
 }
-.top-nav > li > a {
+.top-nav ul > li > a {
     text-decoration: none;
     color: black;
     padding: 0px 10px;
     
 }
-.top-nav > li > a:hover, .icon:hover {
+.top-nav > ul > li > a:hover, .icon:hover {
     color: #4169E1;
     text-decoration: underline;
 }
@@ -80,7 +85,7 @@ footer {
 }
 
 @media screen and (max-width: 550px) {
-    .top-nav > li > a {
+    .top-nav > ul > li > a {
         display: none;
     }
     .icon {
@@ -89,21 +94,21 @@ footer {
     }
 }
 @media screen and (max-width: 550px) {
-    .top-nav.vertical {
+    .top-nav.vertical  {
         position: relative;
         flex-direction: column;
         align-items: flex-start;             
     }
     .top-nav.vertical .icon {
         position: absolute;
-        top: 0;
+        top: 6px;
         right: 0;
-        margin-right: 15px;
+        margin-right: 0px;
     }
-    .top-nav.vertical  > li {        
+    .top-nav.vertical > ul > li {        
         width: 90%;             
     }
-    .top-nav.vertical  > li > a {
+    .top-nav.vertical > ul > li > a {
         display: inline-block;        
         width: 90%;           
     }
